@@ -9,19 +9,24 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200..400&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href = "style.css">
+        
+        <!-- rel = relationship -->  
     </head>
     
     <!-- font family를 쉼표로 여러 개 넣으면, 앞의 것을 적용할 수 없을 때 뒤의 것을 자동 적용. -->
     <body style = "font-family : Arial, 'Noto Sans KR'; background-color : black "> <!-- page 내용 -->
-        <p style = "font-size : 10px; color : white "> !! 이 웹사이트는 어떠한 수익 창출도 하지 않습니다 !! </p>
-
+        <p id = "top_text"> !! 이 웹사이트는 어떠한 수익 창출도 하지 않으며, 단순히 학습을 위해 만들어진 팬메이드 웹사이트입니다 !! </p>
+        
         <!-- css 속성은 "속성이름 colon 속성값" 으로. -->
         <!-- css 속성을 추가할 때는 "" 내에서 semi colon으로 추가. -->
-        <div style = "text-align : center;"> 
-            <h1 style = "color : #ffffff"> Maze 9th Artillery Division </h1> <!-- 가장 큰 제목. --> 
+
+        <div> 
+            <img src = "maze_symbol.webp" style = "width: 80px"> 
+            <h1 style = "color : #ffffff; text-align: center; margin: 0 auto"> Maze 9th Artillery Division </h1> <!-- 가장 큰 제목. --> 
             <!-- src = source : 출처 -->
             <img src = "https://i.namu.wiki/i/awGRaQrBfB3Uy4mXMM4JXz9IOfyColHqjIN4-8NHVpuojmARK1M5yXclEckHCx-WN0ydmeYWIAjV7dcJkt4i0Odu38ZnFc3fcxoaXmLE4Djf4h7RpvCAcX6lY2ZLgRCJxpqsQVHCXPrJxLFZgNXqpg.webp" 
-            style = "width : 720px">
+            style = "width : 720px; display: block; margin: 0 auto">
             
         </div>
 
@@ -32,15 +37,15 @@
             <img src = "림버스컴퍼니_이상.webp"> 
             -->
             
-            <p style = "text-align: center"> 
+            <p class = "normal_text"> 
                 카운터사이드를 플레이하며 감명받은 3명이 만든 코딩 팀. <br> 
             </p>    
 
-            <a href = "team_member.html" style = "text-decoration : none">
+            <a href = "team_member.html">
                 <img src = "Team_member.jpg" style = "width : 320px; align-self : left">
             </a>
 
-            <a href = "ps_note.html" style = "text-decoration : none"> 
+            <a href = "ps_note.html"> 
                 <img src = "Team_note.jpg" style = "width: 320px; align-self : right"> 
             </a>
             <!--
@@ -61,7 +66,7 @@
         </a>
 
         <div style = "background-color : #000000 ">
-            <p style = "color: #ffffff; font-weight : 100; font-size : 13px; padding: 10px 10px"> 
+            <p id = "bottom_text"> 
                 Team. Maze 9th Artillery Divison / 메이즈 제 9 포병전대 <br><br> 
 
                 홈페이지 관리자 이메일 : rock5858@snu.ac.kr <br> 

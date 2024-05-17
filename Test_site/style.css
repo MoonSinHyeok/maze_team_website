@@ -1,0 +1,38 @@
+body{
+    font-family : Arial, 'Noto Sans KR'; 
+    background-color : #000000;
+    background-image: 
+        linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), 
+        url('maze_symbol.webp'); 
+    background-position : center;
+    background-repeat : no-repeat; 
+}
+a {
+    text-decoration : None;
+}
+
+
+.normal_text{
+    text-align : center; 
+}
+.main_image{
+    width : 720px; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+
+#top_text{
+    font-size : 10px; 
+    color : #ffffff; 
+}
+#bottom_text{
+    color : #ffffff;
+    font-weight : 100; 
+    font-size : 13px; 
+    padding: 10px 10px; 
+}
+
+/*
+    css 파일에서는 한 줄 주석과 여러 줄 주석 구분 없이 이렇게..!
+*/
