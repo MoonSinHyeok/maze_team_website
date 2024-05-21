@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200..400&display=swap" rel="stylesheet">
-        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "index_style.css">
         
         <!-- rel = relationship -->  
     </head>
@@ -22,7 +22,9 @@
         <!-- css 속성을 추가할 때는 "" 내에서 semi colon으로 추가. -->
 
         <div> 
-            <img src = "maze_symbol.webp" style = "width: 80px"> 
+            <a href = "index.html">
+                <img src = "maze_symbol.webp" style = "width: 80px"> 
+            </a>
             <h1 style = "color : #ffffff; text-align: center; margin: 0 auto"> Maze 9th Artillery Division </h1> <!-- 가장 큰 제목. --> 
             <!-- src = source : 출처 -->
             <img src = "https://i.namu.wiki/i/awGRaQrBfB3Uy4mXMM4JXz9IOfyColHqjIN4-8NHVpuojmARK1M5yXclEckHCx-WN0ydmeYWIAjV7dcJkt4i0Odu38ZnFc3fcxoaXmLE4Djf4h7RpvCAcX6lY2ZLgRCJxpqsQVHCXPrJxLFZgNXqpg.webp" 
@@ -37,21 +39,19 @@
             카운터사이드를 플레이하며 감명받은 3명이 만든 코딩 팀. <br> 
         </p>    
         
-        <div style = "height: 240px; margin: 0 25% 100px;"> 
-            <a href = "team_member.html">
-                <img src = "Team_member.jpg" style = "height: 80%; float: left">
+        <div style = "width: 60%; height: 240px; margin: 0 auto;">
+            <a class = "Button" href = "team_member.html" style = "float: left">
+                <img src = "Team_member.jpg" style = "height: 80%;">
             </a>
 
-            <a href = "ps_note.html"> 
-                <img src = "Team_note.jpg" style = "height: 80%; float: right"> 
-            </a>
+            <a class = "Button" href = "ps_note.html" style = "float: right"> 
+                <img src = "Team_note.jpg" style = "height: 80%;"> 
+            </a>    
         </div>
-        
-
         <!-- html 속성 문법. 속성이름 = "속성값" -->
         <!-- href = hypertext refrerence -->
         
-        <div style = "background-color: #000000;">
+        <div style = "background-color: #000000; margin-top: 10px;">
             <p id = "bottom_text"> 
                 Team. Maze 9th Artillery Divison / 메이즈 제 9 포병전대 <br><br> 
 

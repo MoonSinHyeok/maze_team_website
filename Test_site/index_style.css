@@ -22,11 +22,14 @@ a {
     color: #ffffff; 
 }
 .main_image{
-    width : 720px; 
+    width : 900px; 
     display: block; 
     margin: 0 auto; 
 }
-
+.Button{
+    display: inline; 
+    height: 240px; 
+}
 
 #top_text{
     font-size : 10px; 
