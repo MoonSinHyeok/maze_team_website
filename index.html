@@ -18,6 +18,9 @@
 <!-- font family를 쉼표로 여러 개 넣으면, 앞의 것을 적용할 수 없을 때 뒤의 것을 자동 적용. -->
 
 <body> <!-- page 내용 -->
+
+
+
     <!-- 네비게이션 바 -->
     <div class="navbar">
         <!-- 로고 및 타이틀 -->
@@ -39,10 +42,15 @@
     <!-- css 속성은 "속성이름 colon 속성값" 으로. -->
     <!-- css 속성을 추가할 때는 "" 내에서 semi colon으로 추가. -->
 
+
+
+
+
     <!-- 메인 -->
     <div class="main">
+        <!-- 카사 로고, 메이즈 풀네임 간지나게 -->
         <img src="Resources/CS.png">
-        <h1 style="color : #ffffff; text-align: center; margin: 0 auto"> Maze 9th Artillery Division </h1>
+        <h1> Maze 9th Artillery Division </h1>
         <!-- 가장 큰 제목. -->
         <!-- src = source : 출처 -->
         <p>
@@ -53,9 +61,10 @@
 
     <!-- 페이지 이동 카드 -->
     <div class="list">
+        <!-- 카드마다 링크 지정, 아이콘 및 설명 적기 -->
         <div class="item" onclick="location.href='team_member.html'">
             <div class="icon">
-                <i class='bx bx-user'></i>
+                <i class='bx bx-user'></i> <!-- 아이콘. head에 링크 추가해서 가져옴-->
             </div>
             <div class="info">
                 <h3>Team Member</h3>
@@ -86,19 +95,11 @@
     </div>
 
 
-    <!-- <div style="width: 60%; height: 240px; margin: 0 auto;">
-        <a class="Button" href="team_member.html" style="float: left">
-            <img src="Resources/Team_member.jpg" style="height: 80%;">
-        </a>
 
-        <a class="Button" href="ps_note.html" style="float: right">
-            <img src="Resources/Team_note.jpg" style="height: 80%;">
-        </a>
-    </div> -->
-    <!-- html 속성 문법. 속성이름 = "속성값" -->
-    <!-- href = hypertext refrerence -->
 
+    <!-- 푸터. 보통 페이지의 최하단 내용을 담는 속성 -->
     <footer>
+        <!-- 팀네임과 이메일 작게 적어두기 -->
         <div class="team_name">
             <h3>Team. Maze 9th Artillery Divison</h3>
             <h3>메이즈 제 9 포병전대</h3>
