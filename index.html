@@ -6,6 +6,7 @@
     <meta charset="UTF-8"> <!-- 인코딩 지정. meta 태그의 경우 종료 태그를 사용하지 않음. 내용에 대한 영향을 주지 않기 때문. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200..400&display=swap" rel="stylesheet">
@@ -22,13 +23,13 @@
         <!-- 로고 및 타이틀 -->
         <div onclick="location.href='index.html'" class="logo">
             <img src="Resources/maze_symbol.webp">
-            <h2 style="color : #ffffff; margin: auto;">Maze 9TH A.D.</h2>
+            <h2 style="margin: auto;">Maze 9TH A.D.</h2>
         </div>
         <!-- 네비게이션 리스트 -->
         <ul>
-            <li><a href="#">팀원 소개</a></li>
-            <li><a href="#">팀 노트</a></li>
-            <li><a href="#">프로젝트</a></li>
+            <li><a href="team_member.html">팀원 소개</a></li>
+            <li><a href="ps_note.html">팀 노트</a></li>
+            <li><a href="project.html">프로젝트</a></li>
         </ul>
         <!-- 간지 -->
         <button class="contact-btn">Contact Us</button>
@@ -38,23 +39,54 @@
     <!-- css 속성은 "속성이름 colon 속성값" 으로. -->
     <!-- css 속성을 추가할 때는 "" 내에서 semi colon으로 추가. -->
 
+    <!-- 메인 -->
     <div class="main">
-        <img style="width: 320px;" src="Resources/CS.png">
+        <img src="Resources/CS.png">
         <h1 style="color : #ffffff; text-align: center; margin: 0 auto"> Maze 9th Artillery Division </h1>
         <!-- 가장 큰 제목. -->
         <!-- src = source : 출처 -->
-        <p class="normal_text" style="margin-bottom: 100px">
-            카운터사이드를 플레이하며 감명받은 3명이 만든 코딩 팀. <br>
+        <p>
+            카운터사이드를 플레이하며 감명받은 3명이 만든 코딩 팀.
         </p>
-
     </div>
 
-    <!-- 아래처럼 파일 경로로 넣어줄 수도 있음 -->
+
+    <!-- 페이지 이동 카드 -->
+    <div class="list">
+        <div class="item" onclick="location.href='team_member.html'">
+            <div class="icon">
+                <i class='bx bx-user'></i>
+            </div>
+            <div class="info">
+                <h3>Team Member</h3>
+                <p>팀원 소개 페이지</p>
+            </div>
+            <i class='bx bx-caret-right'></i>
+        </div>
+        <div class="item" onclick="location.href='ps_note.html'">
+            <div class="icon">
+                <i class='bx bx-notepad'></i>
+            </div>
+            <div class="info">
+                <h3>Team Note</h3>
+                <p>팀 노트 페이지</p>
+            </div>
+            <i class='bx bx-caret-right'></i>
+        </div>
+        <div class="item" onclick="location.href='project.html'">
+            <div class="icon">
+                <i class='bx bx-desktop'></i>
+            </div>
+            <div class="info">
+                <h3>Team Project</h3>
+                <p>프로젝트 페이지</p>
+            </div>
+            <i class='bx bx-caret-right'></i>
+        </div>
+    </div>
 
 
-
-
-    <div style="width: 60%; height: 240px; margin: 0 auto;">
+    <!-- <div style="width: 60%; height: 240px; margin: 0 auto;">
         <a class="Button" href="team_member.html" style="float: left">
             <img src="Resources/Team_member.jpg" style="height: 80%;">
         </a>
@@ -62,18 +94,21 @@
         <a class="Button" href="ps_note.html" style="float: right">
             <img src="Resources/Team_note.jpg" style="height: 80%;">
         </a>
-    </div>
+    </div> -->
     <!-- html 속성 문법. 속성이름 = "속성값" -->
     <!-- href = hypertext refrerence -->
 
-    <div style="background-color: #000000; margin-top: 10px;">
-        <p id="bottom_text">
-            Team. Maze 9th Artillery Divison / 메이즈 제 9 포병전대 <br><br>
-
-            홈페이지 관리자 이메일 : rock5858@snu.ac.kr <br>
-        </p>
-
-    </div>
+    <footer>
+        <div class="team_name">
+            <h3>Team. Maze 9th Artillery Divison</h3>
+            <h3>메이즈 제 9 포병전대</h3>
+        </div>
+        <div class="email">
+            <h3>관리자 이메일</h3>
+            <a>rock5858@snu.ac.kr</a>
+            <a>anstlsgur7901@konkuk.ac.kr</a>
+        </div>
+    </footer>
 </body>
 
 </html>

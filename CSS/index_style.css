@@ -5,13 +5,15 @@
     font-family: Arial, 'Noto Sans KR';
     /* 위 속성값을 지정해주면 내가 지정한 width가 실제 사이즈로 들어감 */
     /* 지정해주지 않을 경우, 실제 사이즈는 width + border */
+
 }
 
 body {
     background-color: #000000;
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('maze_symbol.webp');
+        linear-gradient(rgba(0, 0, 0, 0.7) 60%, rgb(69, 69, 69, 0.7))
+        /*, url("../Resources/maze_symbol.webp") */
+    ;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -25,14 +27,27 @@ a {
 
 
 
+
+
+/* 로고 디자인 */
 .logo {
     display: flex;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
+.logo h2 {
+    color: #ffffff;
+    font-weight: 700;
+    transition: 0.7s ease
+}
+
 .logo:hover {
     transform: scale(1.01);
+}
+
+.logo:hover h2 {
+    color: #BF2626;
 }
 
 .logo img {
@@ -46,6 +61,8 @@ a {
 
 
 
+
+/* 네비게이션 바 디자인 */
 
 .navbar {
     display: flex;
@@ -66,6 +83,7 @@ a {
 
 .navbar ul li {
     list-style: none;
+    margin: 0 20px;
 }
 
 .navbar ul li a {
@@ -74,10 +92,11 @@ a {
     font-size: 16px;
     margin-right: 25px;
     transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 .navbar ul li:hover a {
-    color: #ff0a0a;
+    color: #BF2626;
 }
 
 .navbar ul li:last-child a {
@@ -89,64 +108,223 @@ a {
 
 
 
+
+/* 컨택트 버튼 */
+
 .contact-btn {
     background: #ebebeb;
     padding: 8px 20px;
     border: none;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    transition: 0.3s ease;
 }
 
 .contact-btn:hover {
-    background: #ff1f1f;
+    background: #BF2626;
 }
 
 
 
 
 
+
+
+/* 메인 디자인 */
+
 .main {
-    height: 960px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.main img {
+    width: 480px;
+}
 
+.main h1 {
+    font-size: 32px;
+}
 
-
-
-
-
-.normal_text {
-    text-align: center;
+.main p {
+    font-size: 16px;
     color: #ffffff;
 }
 
-.main_image {
-    width: 900px;
-    display: block;
-    margin: 0 auto;
+
+
+
+
+
+
+
+/* 페이지 리스트 디자인 */
+
+.list {
+    margin-top: 50px;
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
 }
 
-.Button {
-    display: inline;
-    height: 240px;
+.list .item {
+    background: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0 30px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-#top_text {
+.list .item:hover {
+    border-color: #BF2626;
+}
+
+.list .item .icon {
+    width: 50px;
+    height: 50px;
+    background: #919191;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.list .item:hover .icon {
+    background: #BF2626;
+}
+
+.list .item .icon i {
+    font-size: 32px;
+}
+
+.list .item .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list .item .info h3 {
+    color: #BF2626;
+    font-size: 24px;
+}
+
+.list .item .info p {
+    color: #ffffff;
     font-size: 10px;
-    color: #ffffff;
+    font-weight: 500;
 }
 
-#bottom_text {
+.list .item>i {
     color: #ffffff;
-    font-weight: 100;
-    font-size: 13px;
-    padding: 10px 10px;
+    font-size: 32px;
+    transition: color 0.3s ease;
+}
+
+.list .item:hover>i {
+    color: #BF2626;
+}
+
+
+
+
+
+
+
+
+/* 푸터 디자인 */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 0 10px;
+
+}
+
+footer .email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .team_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h3 {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+footer a {
+    color: #ababab;
+    font-size: 12px;
+}
+
+
+
+
+/* 반응형 디자인 */
+@media screen and (max-width: 1100px) {
+    .list {
+        flex-wrap: wrap;
+        gap: 10px
+    }
+
+    .list .item {
+        flex-basis: 49%;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .navbar button {
+        display: none;
+    }
+
+    .main h1 {
+        font-size: 22px;
+
+    }
+
+    .main p {
+        font-size: 12px;
+    }
+
+    .main img {
+        width: 60%;
+    }
+
+    .list .item {
+        flex-basis: 100%;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .main {
+        margin-top: 50px;
+        height: 500px;
+        justify-content: start;
+    }
 }
 
 /*
