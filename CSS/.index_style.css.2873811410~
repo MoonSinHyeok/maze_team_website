@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, 'Noto Sans KR';
+    /* 위 속성값을 지정해주면 내가 지정한 width가 실제 사이즈로 들어감 */
+    /* 지정해주지 않을 경우, 실제 사이즈는 width + border */
+
+}
+
+body {
+    background-size: cover;
+    background-color: #000000;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgb(122, 122, 122, 0.7)),
+        url("Resources/maze_symbol.webp");
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: None;
+}
+
+
+
+
+
+
+.logo {
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.01);
+}
+
+.logo img {
+    width: 90px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.navbar h2 {
+    color: #ffffff font-weight=600
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0 10px
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li:hover a {
+    color: #ff0a0a;
+}
+
+.navbar ul li:last-child a {
+    margin: 0;
+}
+
+
+
+
+
+
+.contact-btn {
+    background: #ebebeb;
+    padding: 8px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #ff1f1f;
+}
+
+
+
+
+
+.main {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+.normal_text {
+    text-align: center;
+    color: #ffffff;
+}
+
+.main_image {
+    width: 900px;
+    display: block;
+    margin: 0 auto;
+}
+
+.Button {
+    display: inline;
+    height: 240px;
+}
+
+#top_text {
+    font-size: 10px;
+    color: #ffffff;
+}
+
+#bottom_text {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 13px;
+    padding: 10px 10px;
+}
+
+/*
+    css 파일에서는 한 줄 주석과 여러 줄 주석 구분 없이 이렇게..!
+*/
