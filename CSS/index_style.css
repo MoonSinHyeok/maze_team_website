@@ -30,6 +30,16 @@ a {
 
 
 /* 로고 디자인 */
+
+/* 
+display: flex를 통해 수평정렬 
+cursor: 마우스 올렸을때 커서 모양
+transition: 해당 요소가 변경될때 걸리는 시간 조절
+font-weight: 굵기
+:hover: 마우스 올라갔을때 적용할 css
+margin과 padding의 차이 = margin은 해당 요소와 밖 요소의 간격. padding은 내부 요소와 벽? 사이 간격.
+*/
+
 .logo {
     display: flex;
     cursor: pointer;
@@ -63,6 +73,11 @@ a {
 
 
 /* 네비게이션 바 디자인 */
+/* 
+align-items: 요소 내부 아이템들 정렬(center, right 등)
+justify-content: space-between -> margin과 padding을 고려해 같은 간격으로 아이템들이 있게 해줌
+list-style: none -> 리스트 요소 처음에 붙는 기호 제거
+*/
 
 .navbar {
     display: flex;
@@ -110,6 +125,10 @@ a {
 
 
 /* 컨택트 버튼 */
+/* 
+border: 테두리
+border-radius: 테두리 둥글게
+*/
 
 .contact-btn {
     background: #ebebeb;
@@ -133,6 +152,12 @@ a {
 
 
 /* 메인 디자인 */
+/* 
+height: 1000px를 통해 스크롤 내리면서 구경하는 느낌
+flex-direction: column -> 수직 정렬
+display: flex의 기능2 -> 이게 있음으로 인해 align-items, justify-content 적용 가능
+margin: auto -> 가운데 정렬
+*/
 
 .main {
     height: 1000px;
@@ -148,6 +173,9 @@ a {
 
 .main h1 {
     font-size: 32px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .main p {
@@ -163,6 +191,10 @@ a {
 
 
 /* 페이지 리스트 디자인 */
+/* 
+flex-wrap: nowrap -> 수평/ 수직 정렬된 요소들의 길이 총합이 부모요소의 길이를 넘으면 자동축소 
+border: 1px solid transparent -> 1px 크기의 투명 테두리 추가
+*/
 
 .list {
     margin-top: 50px;
@@ -280,6 +312,11 @@ footer a {
 
 
 /* 반응형 디자인 */
+/* 
+스크린 넓이가 (max-width: 넣고싶은 넓이) 이하일때 적용되는 css
+flex-basis: flex요소 내부 아이템의 크기 지정
+*/
+
 @media screen and (max-width: 1100px) {
     .list {
         flex-wrap: wrap;
