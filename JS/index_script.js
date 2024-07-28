@@ -34,12 +34,33 @@ let currentSong = 0;
 let playing = false;
 let vol = 0.5;
 
+// 이미지 슬라이드 인덱스
+var slideIndex = 0;
+
+// 실행될때마다 인덱스에 해당하는 이미지를 제외한 다른이미지 안보이게 + 인덱스에 해당하는 이미지 보이게 -> 애니메이션 적용되면서 나타남. index++해주고 다음 실행은 3000ms뒤
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "flex";
+
+  setTimeout(showSlides, 3000); // 3초마다 이미지 변경
+}
+
 // 페이지 로드후("DOMContentLoaded") 실행되는 이벤트추가
 // time, song.vol은 미리 초기화
 // song에 timeupdate와 ended 이벤트 추가, 발생시 실행할 함수 넣기
 // 버튼 및 진행 바에 클릭 이벤트와 실행할 함수 추가
 document.addEventListener("DOMContentLoaded", () => {
   loadSong(currentSong);
+  showSlides();
   time.innerText = "0:00 - 0:00";
   song.volume = vol;
   song.addEventListener("timeupdate", updateProgress);
