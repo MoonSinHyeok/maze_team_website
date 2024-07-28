@@ -1,21 +1,200 @@
-*{
-    box-sizing : border-box; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, 'Noto Sans KR';
     /* 위 속성값을 지정해주면 내가 지정한 width가 실제 사이즈로 들어감 */
-    /* 지정해주지 않을 경우, 실제 사이즈는 width + border */  
-}
-body{
-    font-family : Arial, 'Noto Sans KR'; 
-    background-color : #000000;
-    background-image: 
-        linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), 
-        url('maze_symbol.webp'); 
-    background-position : center;
-    background-repeat : no-repeat; 
+    /* 지정해주지 않을 경우, 실제 사이즈는 width + border */
+
 }
 
-#bottom_text{
-    color : #ffffff;
-    font-weight : 100; 
-    font-size : 13px; 
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #000000;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7) 25%, rgb(69, 69, 69, 0.7) 60%, rgb(0, 0, 0, 0.7))
+        /*, url("../Resources/maze_symbol.webp") */
+    ;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: None;
+}
+
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 로고 디자인 */
+
+/* 
+display: flex를 통해 수평정렬 
+cursor: 마우스 올렸을때 커서 모양
+transition: 해당 요소가 변경될때 걸리는 시간 조절
+font-weight: 굵기
+:hover: 마우스 올라갔을때 적용할 css
+margin과 padding의 차이 = margin은 해당 요소와 밖 요소의 간격. padding은 내부 요소와 벽? 사이 간격.
+*/
+
+.logo {
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo h2 {
+    color: #ffffff;
+    font-weight: 700;
+    transition: 0.7s ease
+}
+
+.logo:hover {
+    transform: scale(1.01);
+}
+
+.logo:hover h2 {
+    color: #BF2626;
+}
+
+.logo img {
+    width: 90px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+/* 네비게이션 바 디자인 */
+/* 
+align-items: 요소 내부 아이템들 정렬(center, right 등)
+justify-content: space-between -> margin과 padding을 고려해 같은 간격으로 아이템들이 있게 해줌
+list-style: none -> 리스트 요소 처음에 붙는 기호 제거
+*/
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.navbar h2 {
+    color: #ffffff font-weight=600
+}
+
+.navbar ul {
+    display: flex;
+    margin: 0 10px
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 25px;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+.navbar ul li:hover a {
+    color: #BF2626;
+}
+
+.navbar ul li:last-child a {
+    margin: 0;
+}
+
+
+
+/* 컨택트 버튼 */
+/* 
+border: 테두리
+border-radius: 테두리 둥글게
+*/
+
+.contact-btn {
+    background: #ebebeb;
+    padding: 8px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    animation-duration: 1s;
+    animation-name: rainbowLink;
+    animation-iteration-count: infinite;
+}
+
+
+/* 무지개빛 총공격이다 */
+@keyframes rainbowLink {
+    0% {
+        background: #ff2a2a;
+    }
+
+    15% {
+        background: #ff7a2a;
+    }
+
+    30% {
+        background: #ffc52a;
+    }
+
+    45% {
+        background: #43ff2a;
+    }
+
+    60% {
+        background: #2a89ff;
+    }
+
+    75% {
+        background: #202082;
+    }
+
+    90% {
+        background: #6b2aff;
+    }
+
+    100% {
+        background: #e82aff;
+    }
+}
+
+
+.github {
+    cursor: pointer;
+}
+
+
+#bottom_text {
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 13px;
     padding: 10px 10px;
 }
