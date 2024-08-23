@@ -47,12 +47,16 @@ margin과 padding의 차이 = margin은 해당 요소와 밖 요소의 간격. p
     display: flex;
     cursor: pointer;
     transition: 0.3s ease;
+
 }
 
 .logo h2 {
     color: #ffffff;
     font-weight: 700;
-    transition: 0.7s ease
+    transition: 0.7s ease;
+    width: 175px;  
+    /* 혁률 : 일단 이렇게 해서 로고 부분은 화면 크기랑 무관하게 글자가 유지되도록 해놨는데 더 좋은 수정방안 
+             생각나는 거 있으면 막 수정해도 됨 ㅇㅇ. */ 
 }
 
 .logo:hover {
@@ -80,12 +84,17 @@ margin과 padding의 차이 = margin은 해당 요소와 밖 요소의 간격. p
 align-items: 요소 내부 아이템들 정렬(center, right 등)
 justify-content: space-between -> margin과 padding을 고려해 같은 간격으로 아이템들이 있게 해줌
 list-style: none -> 리스트 요소 처음에 붙는 기호 제거
+
+혁률: 찾아보니 space-between을 사용하면 화면에 딱 맞도록 설정이 됨. 
+    수정할 때마다 관련 내용 찾아보면서 적절한 옵션으로 바꿔줘야 할 듯. 
+
 */
 
 .navbar {
     display: flex;
+    flex-direction: row; 
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* 간격 일정하도록 */ 
     height: 80px;
     padding: 0 20px;
     margin-top: 20px;
@@ -97,7 +106,10 @@ list-style: none -> 리스트 요소 처음에 붙는 기호 제거
 
 .navbar ul {
     display: flex;
-    margin: 0 10px
+    flex-direction: row; 
+    justify-content: space-evenly;
+    margin-left: 20px; 
+    width: 100%;
 }
 
 .navbar ul li {
@@ -109,7 +121,6 @@ list-style: none -> 리스트 요소 처음에 붙는 기호 제거
     text-decoration: none;
     color: #ffffff;
     font-size: 16px;
-    margin-right: 25px;
     transition: color 0.3s ease;
     font-weight: 600;
 }
@@ -121,7 +132,6 @@ list-style: none -> 리스트 요소 처음에 붙는 기호 제거
 .navbar ul li:last-child a {
     margin: 0;
 }
-
 
 
 
@@ -168,7 +178,7 @@ margin: auto -> 가운데 정렬
 */
 
 .main {
-    height: 110vh;
+    height: 75vh; /* 혁률: 너무 넓게 보이나 싶어서 약간 줄여봤음. 마음에 드는 대로 수정해도 ok */  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -456,14 +466,14 @@ footer a {
 /* 작은문구 알림 */
 .alert {
     display: flex;
+    flex-direction: column;
+    justify-content: center; 
     align-items: center;
-    justify-content: center;
 }
 
 .alert p {
     font-size: 10px;
     color: #ababab;
-
 }
 
 
