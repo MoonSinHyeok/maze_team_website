@@ -73,12 +73,6 @@ margin과 padding의 차이 = margin은 해당 요소와 밖 요소의 간격. p
 }
 
 
-
-
-
-
-
-
 /* 네비게이션 바 디자인 */
 /* 
 align-items: 요소 내부 아이템들 정렬(center, right 등)
@@ -133,9 +127,26 @@ list-style: none -> 리스트 요소 처음에 붙는 기호 제거
     margin: 0;
 }
 
+.navbar ul li .contact_li:hover .contact_menu {
+    height: 100px; 
+}
 
 
+/* 연락처 메뉴 보여주기 위한 부분 */ 
 
+.contact_li {
+    position: relative; 
+}
+
+
+.contact_menu {
+    position: absolute;
+    width: 100%; 
+    height: 0px; /* 처음에는 높이 0 -> 안 보임 */ 
+    z-index: 10; /* 다른 요소보다 위에 있도록 */
+    transition: 2s ease-out; 
+    /* property, duration, timing-function, delay 순서*/ 
+}
 
 
 
